@@ -7,22 +7,42 @@
     </head>
     <body>
 
+        <h1>Book a Cab</h1>
+
         <div class="pages home">
-            <h1>Book a Cab</h1>
             <button class="primary large book-cab" id="button-book-cab">Book a Cab</button>
             <button class="primary large" id="log-in" title="disabled" disabled>Log In</button>
         </div>
 
-        <div class="pages hide plan">
+        <div class="pages plan">
             <div class="cab-type-container">
                 <div class="cab-type selected" id="cab-mini" data-cab-type="cab-mini">Mini</div>
                 <div class="cab-type" id="cab-sedan" data-cab-type="cab-sedan">Sedan</div>
                 <div class="cab-type" id="cab-prime" data-cab-type="cab-prime">Prime</div>
             </div>
+            <div class="trip-container">
 
+                <div class="location-container">
+                    <label for="city-origin" class="label">From</label>
+                    <select id="city-origin" class="city">
+                        <option value="delhi">Delhi</option>
+                        <option value="mumbai">Mumbai</option>
+                    </select>
+                </div>
+
+                <div class="location-container">
+                    <label for="city-destination" class="label">To</label>
+                    <select id="city-destination" class="city">
+                        <option value="delhi">Delhi</option>
+                        <option value="mumbai">Mumbai</option>
+                    </select>
+                </div>
+
+                <input type="checkbox">
+            </div>
         </div>
 
-        <div class="pages hide confirm"></div>
+        <div class="pages confirm"></div>
 
         <script src="app.js" />
     </body>

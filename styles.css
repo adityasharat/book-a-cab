@@ -53,3 +53,15 @@ table{border-collapse:collapse;border-spacing:0}
 .hide {
     display: none;
 }
+
+.cab-type {
+    display: inline-block;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.cab-type.selected {
+    border: 2px solid red;
+}
