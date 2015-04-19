@@ -50,3 +50,6 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 
 /* app css */
+.hide {
+    display: none;
+}
