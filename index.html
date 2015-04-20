@@ -22,7 +22,7 @@
             </div>
             <div class="trip-container">
 
-                <div class="location-container">
+                <div class="location-container from">
                     <label for="city-origin" class="label">From</label>
                     <select id="city-origin" class="city">
                         <option value="delhi">Delhi</option>
@@ -31,7 +31,7 @@
                     <textarea id="address-origin" cols="30" rows="10"></textarea>
                 </div>
 
-                <div class="location-container">
+                <div class="location-container to">
                     <label for="city-destination" class="label">To</label>
                     <select id="city-destination" class="city">
                         <option value="delhi">Delhi</option>
@@ -40,11 +40,19 @@
                     <textarea id="address-destination" cols="30" rows="10"></textarea>
                 </div>
 
-                <input type="checkbox" id="is-round-trip">
+                <input type="checkbox" id="is-round-trip"/>
                 <label for="is-round-trip">Round Trip</label>
             </div>
 
+            <div class="time-container departure">
+                <label for="time-departure">Departure</label>
+                <input type="datetime-local" id="time-departure"/>
+            </div>
 
+            <div class="time-container return">
+                <label for="time-return">Return</label>
+                <input type="datetime-local" id="time-return"/>
+            </div>
         </div>
 
         <div class="pages confirm"></div>
