@@ -15,6 +15,7 @@
         </div>
 
         <div class="pages plan">
+            <h2>Plan Your Trip</h2>
             <div class="cab-type-container">
                 <div class="cab-type selected" id="cab-mini" data-cab-type="cab-mini">Mini</div>
                 <div class="cab-type" id="cab-sedan" data-cab-type="cab-sedan">Sedan</div>
@@ -28,7 +29,7 @@
                         <option value="delhi">Delhi</option>
                         <option value="mumbai">Mumbai</option>
                     </select>
-                    <textarea id="address-origin" cols="30" rows="10"></textarea>
+                    <textarea id="address-origin" cols="30" rows="4"></textarea>
                 </div>
 
                 <div class="location-container to">
@@ -37,7 +38,7 @@
                         <option value="delhi">Delhi</option>
                         <option value="mumbai">Mumbai</option>
                     </select>
-                    <textarea id="address-destination" cols="30" rows="10"></textarea>
+                    <textarea id="address-destination" cols="30" rows="4"></textarea>
                 </div>
 
                 <input type="checkbox" id="is-round-trip"/>
@@ -52,6 +53,10 @@
             <div class="time-container return">
                 <label for="time-return">Return</label>
                 <input type="datetime-local" id="time-return"/>
+            </div>
+
+            <div class="container">
+                <button id="button-confirm">Proceed to Confirmation</button>
             </div>
         </div>
 
