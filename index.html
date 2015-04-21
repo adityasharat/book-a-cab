@@ -10,14 +10,14 @@
         <h1>Book a Cab</h1>
 
         <!-- home-page: START -->
-        <div class="pages home">
+        <div class="page home">
             <button class="primary large book-cab" id="button-book-cab">Book a Cab</button>
             <button class="primary large" id="log-in" title="disabled" disabled>Log In</button>
         </div>
         <!-- home-page: END -->
 
         <!-- plan-page: START -->
-        <div class="pages plan">
+        <div class="page plan hide">
             <h2>Plan Your Trip</h2>
             <div class="cab-type-container">
                 <div class="cab-type selected" id="cab-mini" data-cab-type="cab-mini">Mini</div>
@@ -64,9 +64,7 @@
         </div>
         <!-- plan-page: plan -->
 
-
-        <div class="pages confirm">
-
+        <div class="page confirm hide">
             <h2>Summary</h2>
 
             <div class="row">
@@ -93,7 +91,6 @@
                 <label for="" class="label">Return</label>
                 <label for="" class="value" id="return"></label>
             </div>
-
         </div>
 
         <script src="app.js" />
