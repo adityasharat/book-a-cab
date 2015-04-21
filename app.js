@@ -8,10 +8,10 @@
         function goToPage(selector) {
             return function () {
                 $pages.hide();
-                $pages.find(selector).show();
+                $('.page' + selector).show();
             };
         }
-        $buttonBookCab.on('click', goToPage('plan'));
+        $buttonBookCab.on('click', goToPage('.plan'));
         $buttonConfirm.on('click', goToPage('.confirm'));
     }
 
