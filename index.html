@@ -3,97 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <title>Book a Cab</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
     <body>
 
-        <h1>Book a Cab</h1>
 
-        <!-- home-page: START -->
-        <div class="page home">
-            <button class="primary large book-cab" id="button-book-cab">Book a Cab</button>
-            <button class="primary large" id="button-log-in" title="disabled" disabled>Log In</button>
-        </div>
-        <!-- home-page: END -->
 
-        <!-- plan-page: START -->
-        <div class="page plan hide">
-            <h2>Plan Your Trip</h2>
-            <div class="cab-type-container">
-                <div class="cab-type selected" id="cab-mini" data-cab-type="cab-mini">Mini</div>
-                <div class="cab-type" id="cab-sedan" data-cab-type="cab-sedan">Sedan</div>
-                <div class="cab-type" id="cab-prime" data-cab-type="cab-prime">Prime</div>
-            </div>
-            <div class="trip-container">
-
-                <div class="location-container from">
-                    <label for="city-origin" class="label">From</label>
-                    <select id="city-origin" class="city">
-                        <option value="delhi">Delhi</option>
-                        <option value="mumbai">Mumbai</option>
-                    </select>
-                    <textarea id="address-origin" cols="30" rows="4"></textarea>
-                </div>
-
-                <div class="location-container to">
-                    <label for="city-destination" class="label">To</label>
-                    <select id="city-destination" class="city">
-                        <option value="delhi">Delhi</option>
-                        <option value="mumbai">Mumbai</option>
-                    </select>
-                    <textarea id="address-destination" cols="30" rows="4"></textarea>
-                </div>
-
-                <input type="checkbox" id="is-round-trip"/>
-                <label for="is-round-trip">Round Trip</label>
-            </div>
-
-            <div class="time-container departure">
-                <label for="time-departure">Departure</label>
-                <input type="datetime-local" id="time-departure"/>
-            </div>
-
-            <div class="time-container return">
-                <label for="time-return">Return</label>
-                <input type="datetime-local" id="time-return"/>
-            </div>
-
-            <div class="container">
-                <button id="button-confirm">Proceed to Confirmation</button>
-            </div>
-        </div>
-        <!-- plan-page: plan -->
-
-        <div class="page confirm hide">
-            <h2>Summary</h2>
-
-            <div class="row">
-                <label for="" class="label">Cab:</label>
-                <label for="" class="value" id="cab-type"></label>
-            </div>
-            <div class="row">
-                <label for="" class="label">From:</label>
-                <label for="" class="value" id="from"></label>
-            </div>
-            <div class="row">
-                <label for="" class="label">To</label>
-                <label for="" class="value" id="to"></label>
-            </div>
-            <div class="row">
-                <label for="" class="label">Return:</label>
-                <label for="" class="value" id="return"></label>
-            </div>
-            <div class="row">
-                <label for="" class="label">Departure:</label>
-                <label for="" class="value" id="departure"></label>
-            </div>
-            <div class="row">
-                <label for="" class="label">Return</label>
-                <label for="" class="value" id="return"></label>
-            </div>
-        </div>
-
-        <script src="libs/jquery-2.1.3.min.js"></script>
+        <script src="libs/jquery.min.js"></script>
+        <script src="libs/bootstrap.min.js"></script>
         <script src="app.js"></script>
     </body>
 </html>
