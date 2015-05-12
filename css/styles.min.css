@@ -53,3 +53,17 @@ table{border-collapse:collapse;border-spacing:0}
 .hide {
     display: none;
 }
+.no-padding {
+    padding: 0!important;
+}
+.no-margin {
+    margin: 0!important;
+}
+body {
+    background-image: url("/images/bg.jpg");
+    color: rgba(0, 0, 0, 0.6);
+}
+.app-header {
+    background: transparent!important;
+    box-shadow: none!important;
+}
