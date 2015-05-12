@@ -67,3 +67,10 @@ body {
     background: transparent!important;
     box-shadow: none!important;
 }
+.cab-form {
+    background: rgba(0,0,0,0.6);
+    padding: 50px 10px 50px 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
