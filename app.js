@@ -1,18 +1,13 @@
 (function ($) {
 
     function init() {
-        var $pages = $('.page');
-        var $buttonBookCab = $('#button-book-cab');
-        var $buttonConfirm = $('#button-confirm');
+        var $returnTripCheckbox = $('#chkbx-r-trip');
+        var $returnTimeElement = $("#r-time-elem");
 
-        function goToPage(selector) {
-            return function () {
-                $pages.hide();
-                $('.page' + selector).show();
-            };
-        }
-        $buttonBookCab.on('click', goToPage('.plan'));
-        $buttonConfirm.on('click', goToPage('.confirm'));
+        $returnTripCheckbox.on('click', function () {
+            $returnTimeElement.toggle(this.checked);
+            console.log(this.checked);
+        });
     }
 
     $(document).ready(init);

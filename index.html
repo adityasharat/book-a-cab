@@ -1,99 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Title</title>
         <meta charset="UTF-8">
-        <title>Book a Cab</title>
-        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="css/styles.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     </head>
     <body>
-
-        <h1>Book a Cab</h1>
-
-        <!-- home-page: START -->
-        <div class="page home">
-            <button class="primary large book-cab" id="button-book-cab">Book a Cab</button>
-            <button class="primary large" id="button-log-in" title="disabled" disabled>Log In</button>
-        </div>
-        <!-- home-page: END -->
-
-        <!-- plan-page: START -->
-        <div class="page plan hide">
-            <h2>Plan Your Trip</h2>
-            <div class="cab-type-container">
-                <div class="cab-type selected" id="cab-mini" data-cab-type="cab-mini">Mini</div>
-                <div class="cab-type" id="cab-sedan" data-cab-type="cab-sedan">Sedan</div>
-                <div class="cab-type" id="cab-prime" data-cab-type="cab-prime">Prime</div>
-            </div>
-            <div class="trip-container">
-
-                <div class="location-container from">
-                    <label for="city-origin" class="label">From</label>
-                    <select id="city-origin" class="city">
-                        <option value="delhi">Delhi</option>
-                        <option value="mumbai">Mumbai</option>
-                    </select>
-                    <textarea id="address-origin" cols="30" rows="4"></textarea>
-                </div>
-
-                <div class="location-container to">
-                    <label for="city-destination" class="label">To</label>
-                    <select id="city-destination" class="city">
-                        <option value="delhi">Delhi</option>
-                        <option value="mumbai">Mumbai</option>
-                    </select>
-                    <textarea id="address-destination" cols="30" rows="4"></textarea>
-                </div>
-
-                <input type="checkbox" id="is-round-trip"/>
-                <label for="is-round-trip">Round Trip</label>
+        <div class="wrapper">
+            <div class="container-fluid no-padding">
+                <nav class="navbar navbar-default no-margin app-header">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">TITLE</a>
+                        </div>
+                    </div>
+                </nav>
             </div>
 
-            <div class="time-container departure">
-                <label for="time-departure">Departure</label>
-                <input type="datetime-local" id="time-departure"/>
-            </div>
+            <div class="cab-form-container">
+                <form class="form-inline form cab-form">
+                    <div class="form-group">
 
-            <div class="time-container return">
-                <label for="time-return">Return</label>
-                <input type="datetime-local" id="time-return"/>
-            </div>
+                        <div class="input-group with-icon location-select">
+                            <div class="input-group-addon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <select class="form-control" id="fromCity">
+                                <option value="" disabled="disabled" selected="selected">Select Origin</option>
+                                <option value="Delhi">Delhi</option><option value="Jaipur">Jaipur</option><option value="Noida">Noida</option><option value="Greater Noida">Greater Noida</option><option value="Ghaziabad">Ghaziabad</option><option value="Agra">Agra</option><option value="Meerut">Meerut</option><option value="Mathura">Mathura</option><option value="Aligarh">Aligarh</option><option value="Bareilly">Bareilly</option><option value="Moradabad">Moradabad</option><option value="Faridabad">Faridabad</option><option value="Gurgaon">Gurgaon</option><option value="Rohtak">Rohtak</option><option value="Chandigarh">Chandigarh</option><option value="Ambala">Ambala</option><option value="Patiala">Patiala</option><option value="Shimla">Shimla</option><option value="Manali">Manali</option><option value="Haridwar">Haridwar</option><option value="Rishikesh">Rishikesh</option><option value="Dehradun">Dehradun</option><option value="Mussorie">Mussorie</option><option value="Nainital">Nainital</option><option value="Corbett">Corbett</option><option value="Rudrapur City">Rudrapur City</option>
+                            </select>
+                        </div>
+                    </div>
 
-            <div class="container">
-                <button id="button-confirm">Proceed to Confirmation</button>
-            </div>
-        </div>
-        <!-- plan-page: plan -->
+                    <div class="form-group">
+                        <div class="input-group with-icon location-select">
+                            <div class="input-group-addon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <select class="form-control" id="toCity">
+                                <option value="" disabled="disabled" selected="selected">Select Destination</option>
+                                <option value="Delhi">Delhi</option><option value="Jaipur">Jaipur</option><option value="Noida">Noida</option><option value="Greater Noida">Greater Noida</option><option value="Ghaziabad">Ghaziabad</option><option value="Agra">Agra</option><option value="Meerut">Meerut</option><option value="Mathura">Mathura</option><option value="Aligarh">Aligarh</option><option value="Bareilly">Bareilly</option><option value="Moradabad">Moradabad</option><option value="Faridabad">Faridabad</option><option value="Gurgaon">Gurgaon</option><option value="Rohtak">Rohtak</option><option value="Chandigarh">Chandigarh</option><option value="Ambala">Ambala</option><option value="Patiala">Patiala</option><option value="Shimla">Shimla</option><option value="Manali">Manali</option><option value="Haridwar">Haridwar</option><option value="Rishikesh">Rishikesh</option><option value="Dehradun">Dehradun</option><option value="Mussorie">Mussorie</option><option value="Nainital">Nainital</option><option value="Corbett">Corbett</option><option value="Rudrapur City">Rudrapur City</option>
+                            </select>
+                        </div>
+                    </div>
 
-        <div class="page confirm hide">
-            <h2>Summary</h2>
+                    <div class="form-group">
+                        <div class="input-group with-icon time-select">
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="datetime-local" id="s-time">
+                        </div>
+                    </div>
 
-            <div class="row">
-                <label for="" class="label">Cab:</label>
-                <label for="" class="value" id="cab-type"></label>
-            </div>
-            <div class="row">
-                <label for="" class="label">From:</label>
-                <label for="" class="value" id="from"></label>
-            </div>
-            <div class="row">
-                <label for="" class="label">To</label>
-                <label for="" class="value" id="to"></label>
-            </div>
-            <div class="row">
-                <label for="" class="label">Return:</label>
-                <label for="" class="value" id="return"></label>
-            </div>
-            <div class="row">
-                <label for="" class="label">Departure:</label>
-                <label for="" class="value" id="departure"></label>
-            </div>
-            <div class="row">
-                <label for="" class="label">Return</label>
-                <label for="" class="value" id="return"></label>
+                    <div class="form-group" id="r-time-elem" style="display:none">
+                        <div class="input-group with-icon time-select">
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="datetime-local" id="r-time">
+                        </div>
+                    </div>
+
+                    <button type="button" id="btn-search" class="btn btn-primary">Find Taxis</button>
+                </form>
+                <form class="form round-trip-form">
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="chkbx-r-trip"> Round Trip?
+                            </label>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
 
-        <script src="libs/jquery-2.1.3.min.js"></script>
+        <script src="libs/jquery.min.js"></script>
+        <script src="libs/bootstrap.min.js"></script>
         <script src="app.js"></script>
     </body>
 </html>
