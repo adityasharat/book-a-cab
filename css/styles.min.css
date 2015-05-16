@@ -60,17 +60,40 @@ table{border-collapse:collapse;border-spacing:0}
     margin: 0!important;
 }
 body {
-    background-image: url("/images/bg.jpg");
-    color: rgba(0, 0, 0, 0.6);
+    background-image: url("/images/bg-01.jpg");
+    background-size: cover;
+}
+.fa {
+    color: #fff;
+}
+.input-group-addon {
+    border-bottom: 2px solid rgb(221, 221, 221)!important;
 }
 .app-header {
     background: transparent!important;
     box-shadow: none!important;
 }
-.cab-form {
-    background: rgba(0,0,0,0.6);
+.cab-form-container {
+    width: 100%;
+    margin-top: 50px;
+}
+.cab-form-container .cab-form {
     padding: 50px 10px 50px 10px;
     max-width: 1000px;
     margin: 0 auto;
-    margin-top: 50px;
+}
+.input-group.location-select {
+    position: relative;
+}
+.input-group.location-select select {
+    text-indent: 37px;
+    width: 200px!important;
+}
+.input-group.location-select .input-group-addon {
+    position: absolute;
+    height: 100%;
+}
+.input-group.location-select .input-group-addon .fa {
+    margin-top: 5px;
+    font-size: 16px;
 }

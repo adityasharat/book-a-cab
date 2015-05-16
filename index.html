@@ -6,8 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="css/styles.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     </head>
     <body>
+
         <div class="container-fluid no-padding">
             <nav class="navbar navbar-default no-margin app-header">
                 <div class="container-fluid">
@@ -18,17 +20,33 @@
             </nav>
         </div>
 
-        <form class="form-inline cab-form">
-            <div class="form-group">
-                <label for="exampleInputName2">Name</label>
-                <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail2">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-            </div>
-            <button type="submit" class="btn btn-default">Send invitation</button>
-        </form>
+        <div class="cab-form-container">
+            <form class="form-inline cab-form">
+                <div class="form-group">
+                    <div class="input-group location-select">
+                        <div class="input-group-addon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <select class="form-control" id="origin">
+                            <option value="" disabled="disabled" selected="selected">Select Origin</option>
+                            <option value="Delhi">Delhi</option><option value="Jaipur">Jaipur</option><option value="Noida">Noida</option><option value="Greater Noida">Greater Noida</option><option value="Ghaziabad">Ghaziabad</option><option value="Agra">Agra</option><option value="Meerut">Meerut</option><option value="Mathura">Mathura</option><option value="Aligarh">Aligarh</option><option value="Bareilly">Bareilly</option><option value="Moradabad">Moradabad</option><option value="Faridabad">Faridabad</option><option value="Gurgaon">Gurgaon</option><option value="Rohtak">Rohtak</option><option value="Chandigarh">Chandigarh</option><option value="Ambala">Ambala</option><option value="Patiala">Patiala</option><option value="Shimla">Shimla</option><option value="Manali">Manali</option><option value="Haridwar">Haridwar</option><option value="Rishikesh">Rishikesh</option><option value="Dehradun">Dehradun</option><option value="Mussorie">Mussorie</option><option value="Nainital">Nainital</option><option value="Corbett">Corbett</option><option value="Rudrapur City">Rudrapur City</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group location-select">
+                        <div class="input-group-addon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <select class="form-control" id="destination">
+                            <option value="" disabled="disabled" selected="selected">Select Destination</option>
+                            <option value="Delhi">Delhi</option><option value="Jaipur">Jaipur</option><option value="Noida">Noida</option><option value="Greater Noida">Greater Noida</option><option value="Ghaziabad">Ghaziabad</option><option value="Agra">Agra</option><option value="Meerut">Meerut</option><option value="Mathura">Mathura</option><option value="Aligarh">Aligarh</option><option value="Bareilly">Bareilly</option><option value="Moradabad">Moradabad</option><option value="Faridabad">Faridabad</option><option value="Gurgaon">Gurgaon</option><option value="Rohtak">Rohtak</option><option value="Chandigarh">Chandigarh</option><option value="Ambala">Ambala</option><option value="Patiala">Patiala</option><option value="Shimla">Shimla</option><option value="Manali">Manali</option><option value="Haridwar">Haridwar</option><option value="Rishikesh">Rishikesh</option><option value="Dehradun">Dehradun</option><option value="Mussorie">Mussorie</option><option value="Nainital">Nainital</option><option value="Corbett">Corbett</option><option value="Rudrapur City">Rudrapur City</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-default">Find Cabs</button>
+            </form>
+        </div>
 
         <script src="libs/jquery.min.js"></script>
         <script src="libs/bootstrap.min.js"></script>
