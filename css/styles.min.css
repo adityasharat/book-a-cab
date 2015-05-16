@@ -59,15 +59,17 @@ table{border-collapse:collapse;border-spacing:0}
 .no-margin {
     margin: 0!important;
 }
-body {
-    background-image: url("/images/bg-01.jpg");
+body, html, .wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #666;
+}
+.wrapper {
+    background: url(../images/bg-01.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 .fa {
     color: #fff;
-}
-.input-group-addon {
-    border-bottom: 2px solid rgb(221, 221, 221)!important;
 }
 .app-header {
     background: transparent!important;
@@ -88,6 +90,7 @@ body {
 .input-group.location-select select {
     text-indent: 37px;
     width: 200px!important;
+    color: #ddd;
 }
 .input-group.location-select .input-group-addon {
     position: absolute;
