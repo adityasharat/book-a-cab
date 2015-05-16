@@ -71,6 +71,16 @@ body, html, .wrapper {
 .fa {
     color: #ddd;
 }
+input[type=checkbox]:after {
+    border-color: #ddd!important;
+}
+input[type=datetime-local] {
+    background-color: transparent;
+    height: 37px;
+}
+select option {
+    color: #000!important;
+}
 .app-header {
     background: transparent!important;
     box-shadow: none!important;
@@ -96,28 +106,33 @@ body, html, .wrapper {
 .cab-form-container .cab-form {
     padding: 50px 10px 5px 10px;
 }
-.input-group.location-select {
+.input-group.with-icon {
     position: relative;
+}
+.input-group.with-icon .input-group-addon {
+    position: absolute;
+    height: 100%;
 }
 .input-group.location-select select {
     text-indent: 37px;
     width: 200px!important;
     color: #ddd;
 }
-.input-group.location-select .input-group-addon {
-    position: absolute;
-    height: 100%;
-}
 .input-group.location-select .input-group-addon .fa {
     margin-top: 5px;
     font-size: 1.5em;
 }
+.input-group.time-select .input-group-addon {
+    padding: 8px 8px;
+}
+.input-group.time-select .input-group-addon .fa {
+    font-size: 1.5em;
+}
+input[type=datetime-local] {
+    text-indent: 25px;
+    width: 210px;
+}
+
 .cab-form-container .checkbox {
     font-size: 1em;
-}
-.cab-form-container input[type=checkbox] {
-    vertical-align: text-top;
-}
-.cab-form-container input[type=checkbox]:after {
-    border-color: #ddd!important;
 }

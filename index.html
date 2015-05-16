@@ -23,7 +23,8 @@
             <div class="cab-form-container">
                 <form class="form-inline form cab-form">
                     <div class="form-group">
-                        <div class="input-group location-select">
+
+                        <div class="input-group with-icon location-select">
                             <div class="input-group-addon">
                                 <i class="fa fa-map-marker"></i>
                             </div>
@@ -33,8 +34,9 @@
                             </select>
                         </div>
                     </div>
+
                     <div class="form-group">
-                        <div class="input-group location-select">
+                        <div class="input-group with-icon location-select">
                             <div class="input-group-addon">
                                 <i class="fa fa-map-marker"></i>
                             </div>
@@ -44,7 +46,26 @@
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Find Taxis</button>
+
+                    <div class="form-group">
+                        <div class="input-group with-icon time-select">
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="datetime-local" id="s-time">
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="d-time-elem">
+                        <div class="input-group with-icon time-select">
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="datetime-local" id="d-time">
+                        </div>
+                    </div>
+
+                    <button type="button" id="find-taxis" class="btn btn-primary">Find Taxis</button>
                 </form>
                 <form class="form round-trip-form">
                     <div class="form-group">
