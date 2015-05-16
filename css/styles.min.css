@@ -50,9 +50,6 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 
 /* app css */
-.hide {
-    display: none;
-}
 .no-padding {
     padding: 0!important;
 }
@@ -101,7 +98,7 @@ select option {
     font-size: inherit!important;
 }
 .cab-form-container .round-trip-form {
-    padding: 5px 10px 5px 10px;
+    padding: 5px 10px 50px 10px;
 }
 .cab-form-container .cab-form {
     padding: 50px 10px 5px 10px;
@@ -132,7 +129,6 @@ input[type=datetime-local] {
     text-indent: 25px;
     width: 210px;
 }
-
 .cab-form-container .checkbox {
     font-size: 1em;
 }
