@@ -1,6 +1,8 @@
 (function ($) {
 
   function init() {
+    var $body = $('body');
+    var $wrapper = $('.wrapper');
     var $checkboxReturnTrip = $('#chkbx-r-trip');
     var $elementReturnTime = $('#r-time-elem');
     var $buttonFindCabs = $('#btn-search');
@@ -12,10 +14,16 @@
     });
 
     $buttonFindCabs.on('click', function () {
-      $elementCabSelection.show();
+      $elementCabSelection
+        .fadeIn(300)
+        .animate({
+          height: $body.height()
+        }, 900);
+      $wrapper.animate({
+        scrollTop: $elementCabSelection.offset().top
+      }, 1210);
     });
   }
 
   $(document).ready(init);
-
 }($));
