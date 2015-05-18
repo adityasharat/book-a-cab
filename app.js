@@ -3,7 +3,7 @@
   function init() {
     var $checkboxReturnTrip = $('#chkbx-r-trip');
     var $elementReturnTime = $('#r-time-elem');
-    var $buttonFindCabs = $('btn-search');
+    var $buttonFindCabs = $('#btn-search');
     var $elementCabSelection = $('#cab-selection-elem');
 
     $checkboxReturnTrip.on('click', function () {
