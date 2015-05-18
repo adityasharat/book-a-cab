@@ -17,7 +17,7 @@
       $elementCabSelection
         .fadeIn(300)
         .animate({
-          height: $body.height()
+          height: $body.height() - 80
         }, 900);
       $wrapper.animate({
         scrollTop: $elementCabSelection.offset().top
