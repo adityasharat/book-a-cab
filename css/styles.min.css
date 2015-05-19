@@ -69,6 +69,9 @@ body, html, .wrapper {
 .fa {
     color: #ddd;
 }
+img {
+    width: 100%;
+}
 input[type=checkbox]:after {
     border-color: #ddd!important;
 }
@@ -141,4 +144,14 @@ input[type=datetime-local] {
 }
 .cab-selection-form .cab-type-container {
     width: 315px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+}
+.cab-type-label {
+    padding: 5px 0px;
+    background-color: #222;
+    color: #ddd;
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: capitalize;
 }
