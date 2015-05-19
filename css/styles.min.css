@@ -154,6 +154,7 @@ input[type=datetime-local] {
     top: 32px;
     right: 0;
     font-size: 5em;
+    display: none;
 }
 .cab-type-label {
     padding: 5px 0px;
@@ -164,6 +165,10 @@ input[type=datetime-local] {
 }
 .cab-type-container.selected {
     border-color: #4a4;
+    cursor: default;
+}
+.cab-type-container.selected .fa {
+    display: block;
 }
 .cab-type-container.selected .cab-type-label {
     background-color: #4a4;

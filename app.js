@@ -1,12 +1,16 @@
 (function ($) {
 
   function init() {
+    var classes = {
+      SELECTED_CAB_TYPE: 'selected'
+    };
     var $body = $('body');
     var $wrapper = $('.wrapper');
     var $checkboxReturnTrip = $('#chkbx-r-trip');
     var $elementReturnTime = $('#r-time-elem');
     var $buttonFindCabs = $('#btn-search');
     var $elementCabSelection = $('#cab-selection-elem');
+    var $elementsCabTypeContainer = $('.cab-type-container');
 
     $checkboxReturnTrip.on('click', function () {
       $elementReturnTime.toggle(this.checked);
@@ -22,6 +26,12 @@
       $wrapper.animate({
         scrollTop: $elementCabSelection.offset().top
       }, 1210);
+    });
+
+    $elementsCabTypeContainer.on('click', function (event) {
+      var $elementSelectedCabType = $(event.currentTarget);
+      $elementsCabTypeContainer.removeClass(classes.SELECTED_CAB_TYPE);
+      $elementSelectedCabType.addClass(classes.SELECTED_CAB_TYPE);
     });
   }
 
