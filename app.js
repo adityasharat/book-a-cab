@@ -15,7 +15,6 @@
 
     $checkboxReturnTrip.on('click', function () {
       $elementReturnTime.toggle(this.checked);
-      console.log(this.checked);
     });
 
     $formTripPlan.on('submit', function () {
