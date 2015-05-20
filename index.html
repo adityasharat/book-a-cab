@@ -28,7 +28,7 @@
                             <div class="input-group-addon">
                                 <i class="fa fa-map-marker"></i>
                             </div>
-                            <select class="form-control" id="fromCity">
+                            <select class="form-control" id="fromCity" required>
                                 <option value="" disabled="disabled" selected="selected">Select Origin</option>
                                 <option value="Delhi">Delhi</option><option value="Jaipur">Jaipur</option><option value="Noida">Noida</option><option value="Greater Noida">Greater Noida</option><option value="Ghaziabad">Ghaziabad</option><option value="Agra">Agra</option><option value="Meerut">Meerut</option><option value="Mathura">Mathura</option><option value="Aligarh">Aligarh</option><option value="Bareilly">Bareilly</option><option value="Moradabad">Moradabad</option><option value="Faridabad">Faridabad</option><option value="Gurgaon">Gurgaon</option><option value="Rohtak">Rohtak</option><option value="Chandigarh">Chandigarh</option><option value="Ambala">Ambala</option><option value="Patiala">Patiala</option><option value="Shimla">Shimla</option><option value="Manali">Manali</option><option value="Haridwar">Haridwar</option><option value="Rishikesh">Rishikesh</option><option value="Dehradun">Dehradun</option><option value="Mussorie">Mussorie</option><option value="Nainital">Nainital</option><option value="Corbett">Corbett</option><option value="Rudrapur City">Rudrapur City</option>
                             </select>
@@ -40,7 +40,7 @@
                             <div class="input-group-addon">
                                 <i class="fa fa-map-marker"></i>
                             </div>
-                            <select class="form-control" id="toCity">
+                            <select class="form-control" id="toCity" required>
                                 <option value="" disabled="disabled" selected="selected">Select Destination</option>
                                 <option value="Delhi">Delhi</option><option value="Jaipur">Jaipur</option><option value="Noida">Noida</option><option value="Greater Noida">Greater Noida</option><option value="Ghaziabad">Ghaziabad</option><option value="Agra">Agra</option><option value="Meerut">Meerut</option><option value="Mathura">Mathura</option><option value="Aligarh">Aligarh</option><option value="Bareilly">Bareilly</option><option value="Moradabad">Moradabad</option><option value="Faridabad">Faridabad</option><option value="Gurgaon">Gurgaon</option><option value="Rohtak">Rohtak</option><option value="Chandigarh">Chandigarh</option><option value="Ambala">Ambala</option><option value="Patiala">Patiala</option><option value="Shimla">Shimla</option><option value="Manali">Manali</option><option value="Haridwar">Haridwar</option><option value="Rishikesh">Rishikesh</option><option value="Dehradun">Dehradun</option><option value="Mussorie">Mussorie</option><option value="Nainital">Nainital</option><option value="Corbett">Corbett</option><option value="Rudrapur City">Rudrapur City</option>
                             </select>
@@ -52,7 +52,7 @@
                             <div class="input-group-addon">
                                 <i class="fa fa-calendar"></i>
                             </div>
-                            <input type="datetime-local" id="s-time">
+                            <input type="datetime-local" id="s-time" required>
                         </div>
                     </div>
 
@@ -65,7 +65,7 @@
                         </div>
                     </div>
 
-                    <button type="button" id="btn-search" class="btn btn-primary">Find Taxis</button>
+                    <button type="submit" id="btn-search" class="btn btn-primary">Find Taxis</button>
                 </form>
 
                 <form class="form round-trip-form">
