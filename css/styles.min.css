@@ -72,6 +72,9 @@ body, html, .wrapper {
 img {
     width: 100%;
 }
+input, textarea, select {
+    background-color: transparent;
+}
 input[type=checkbox]:after {
     border-color: #ddd!important;
 }
