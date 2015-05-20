@@ -6,6 +6,7 @@
     };
     var $body = $('body');
     var $wrapper = $('.wrapper');
+    var $elementFormContainer = $('.cab-form-container');
     var $formTripPlan = $('form.cab-form');
     var $checkboxReturnTrip = $('#chkbx-r-trip');
     var $elementReturnTime = $('#r-time-elem');
@@ -18,14 +19,17 @@
     });
 
     $formTripPlan.on('submit', function () {
-      $elementCabSelection
-        .fadeIn(300)
-        .animate({
-          height: $elementCabSelection.height() > $body.height() ? $elementCabSelection - 80 : $body.height() - 80
-        }, 900);
+      $elementCabSelection.fadeIn(300);
+
+      $elementFormContainer.animate({
+        height: $elementFormContainer.height() +
+          ($elementCabSelection.height() > $body.height() ? $elementCabSelection : $body.height())
+      }, 900);
+
       $wrapper.animate({
         scrollTop: $elementCabSelection.offset().top
       }, 1210);
+
       return false;
     });
 
