@@ -154,6 +154,11 @@ input[type=datetime-local] {
     cursor: pointer;
     position: relative;
 }
+.subtitle {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
 .cab-type-container .fa {
     color: #4a4;
     position: absolute;
