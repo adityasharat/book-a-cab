@@ -38,7 +38,7 @@
       }
 
       $wrapper.animate({
-        scrollTop: $formCabSelection.offset().top
+        scrollTop: $formCabSelection.offset().top - $wrapper.offset().top + $wrapper.scrollTop()
       }, 1210);
 
       return false;
@@ -46,7 +46,8 @@
 
     $elementsCabTypeContainer.on('click', function (event) {
       var $elementSelectedCabType = $(event.currentTarget);
-      var formHeight = $elementFormContainer.height();
+      var formHeight = $elementFormContainer.outerHeight(false);
+      var formCabSelectionHeight = $formCabSelection.outerHeight(false);
 
       $elementsCabTypeContainer.removeClass(classes.SELECTED_CAB_TYPE);
       $elementSelectedCabType.addClass(classes.SELECTED_CAB_TYPE);
@@ -56,13 +57,15 @@
       if (step < 2) {
         $elementFormContainer.animate({
           height: formHeight +
-            ($formContactInfo.outerHeight(false) > $body.height() ? $formContactInfo.outerHeight(false) : $body.height()) - 200
+            ($formContactInfo.outerHeight(false) > $body.height() ? $formContactInfo.outerHeight(false) : $body.height()) -
+            ($body.height() > formCabSelectionHeight ? formCabSelectionHeight : 0) +
+            parseInt($elementFormContainer.css('padding-bottom'), 10)
         }, 900);
         step++;
       }
 
       $wrapper.animate({
-        scrollTop: $wrapper.outerHeight()
+        scrollTop: $formContactInfo.offset().top - $wrapper.offset().top + $wrapper.scrollTop()
       }, 1210);
     });
   }
