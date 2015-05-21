@@ -6,14 +6,20 @@
     };
     var $body = $('body');
     var $wrapper = $('.wrapper');
-    var $elementFormContainer = $('.cab-form-container');
-    var $formTripPlan = $('form.cab-form');
-    var $checkboxReturnTrip = $('#chkbx-r-trip');
+
     var $elementReturnTime = $('#r-time-elem');
-    //var $buttonFindCabs = $('#btn-search');
-    var $elementCabSelection = $('#cab-selection-elem');
+    var $elementFormContainer = $('.cab-form-container');
+    var $elementTripPlan = $('#trip-plan-elem');
     var $elementsCabTypeContainer = $('.cab-type-container');
-    var $elementContactInfoContainer = $('#contact-details-elem');
+
+    var $formTripPlan = $('#trip-plan');
+    var $formCabSelection = $('#cab-selection');
+    var $formContactInfo = $('#contact-info');
+
+    var $checkboxReturnTrip = $('#chkbx-r-trip');
+    //var $buttonFindCabs = $('#btn-search');
+
+    var beenHere = false;
 
     $checkboxReturnTrip.on('click', function () {
       $elementReturnTime.toggle(this.checked);
@@ -22,15 +28,22 @@
     $formTripPlan.on('submit', function () {
       var formHeight = $elementFormContainer.height();
 
-      $elementCabSelection.fadeIn(300);
+      $formCabSelection.fadeIn(300);
       $elementFormContainer.animate({
         height: formHeight +
-          ($elementCabSelection.outerHeight(false) > $body.height() ? $elementCabSelection.outerHeight(false) : $body.height()) +
-          parseInt($elementFormContainer.css('padding-bottom'), 10)
+          ($formCabSelection.outerHeight(false) > $body.height() ? $formCabSelection.outerHeight(false) : $body.height()) +
+          88
       }, 900);
-      $wrapper.animate({
-        scrollTop: $elementCabSelection.offset().top
-      }, 1210);
+
+      if (beenHere) {
+        $wrapper.animate({
+          scrollTop: $formCabSelection.offset().top
+        }, 1210);
+      } else {
+        $wrapper.animate({
+          scrollTop: $body.height()
+        }, 1210);
+      }
 
       return false;
     });
@@ -38,21 +51,27 @@
     $elementsCabTypeContainer.on('click', function (event) {
       var $elementSelectedCabType = $(event.currentTarget);
       var formHeight = $elementFormContainer.height();
-      var contactInfoContainerHeight = $elementContactInfoContainer.outerHeight(false);
-      var elementCabSelectionHeight = $elementCabSelection.outerHeight(false);
+      //var elementTripPlanHeight = $elementTripPlan.outerHeight(false);
+      //var formCabSelectionHeight = $formCabSelection.outerHeight(false);
+      //var contactInfoContainerHeight = $formContactInfo.outerHeight(false);
 
       $elementsCabTypeContainer.removeClass(classes.SELECTED_CAB_TYPE);
       $elementSelectedCabType.addClass(classes.SELECTED_CAB_TYPE);
 
-      $elementContactInfoContainer.fadeIn(300);
-      if (contactInfoContainerHeight + elementCabSelectionHeight > formHeight) {
+      $formContactInfo.fadeIn(300);
+      /*if (contactInfoContainerHeight + formCabSelectionHeight + elementTripPlanHeight > formHeight) {
         $elementFormContainer.animate({
-          height: contactInfoContainerHeight + elementCabSelectionHeight + parseInt($elementFormContainer.css('padding-bottom'), 10)
+          height: elementTripPlanHeight + contactInfoContainerHeight + formCabSelectionHeight
         }, 900);
-      }
+      }*/
+      $elementFormContainer.animate({
+        height: formHeight +
+          ($formContactInfo.outerHeight(false) > $body.height() ? $formContactInfo.outerHeight(false) : $body.height()) -
+          88
+      }, 900);
       $wrapper.animate({
-        scrollTop: $elementContactInfoContainer.offset().top
-      }, 2000);
+        scrollTop: $body.height()
+      }, 1210);
 
     });
   }

@@ -21,64 +21,66 @@
             </div>
 
             <div class="cab-form-container">
-                <form class="form-inline form cab-form" id="trip-plan-elem">
-                    <div class="form-group">
+                <div id="trip-plan-elem">
+                    <form class="form-inline form cab-form" id="trip-plan">
+                        <div class="form-group">
 
-                        <div class="input-group with-icon location-select">
-                            <div class="input-group-addon">
-                                <i class="fa fa-map-marker"></i>
+                            <div class="input-group with-icon location-select">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <select class="form-control" id="fromCity" required>
+                                    <option value="" disabled="disabled" selected="selected">Select Origin</option>
+                                    <option value="Delhi">Delhi</option><option value="Jaipur">Jaipur</option><option value="Noida">Noida</option><option value="Greater Noida">Greater Noida</option><option value="Ghaziabad">Ghaziabad</option><option value="Agra">Agra</option><option value="Meerut">Meerut</option><option value="Mathura">Mathura</option><option value="Aligarh">Aligarh</option><option value="Bareilly">Bareilly</option><option value="Moradabad">Moradabad</option><option value="Faridabad">Faridabad</option><option value="Gurgaon">Gurgaon</option><option value="Rohtak">Rohtak</option><option value="Chandigarh">Chandigarh</option><option value="Ambala">Ambala</option><option value="Patiala">Patiala</option><option value="Shimla">Shimla</option><option value="Manali">Manali</option><option value="Haridwar">Haridwar</option><option value="Rishikesh">Rishikesh</option><option value="Dehradun">Dehradun</option><option value="Mussorie">Mussorie</option><option value="Nainital">Nainital</option><option value="Corbett">Corbett</option><option value="Rudrapur City">Rudrapur City</option>
+                                </select>
                             </div>
-                            <select class="form-control" id="fromCity" required>
-                                <option value="" disabled="disabled" selected="selected">Select Origin</option>
-                                <option value="Delhi">Delhi</option><option value="Jaipur">Jaipur</option><option value="Noida">Noida</option><option value="Greater Noida">Greater Noida</option><option value="Ghaziabad">Ghaziabad</option><option value="Agra">Agra</option><option value="Meerut">Meerut</option><option value="Mathura">Mathura</option><option value="Aligarh">Aligarh</option><option value="Bareilly">Bareilly</option><option value="Moradabad">Moradabad</option><option value="Faridabad">Faridabad</option><option value="Gurgaon">Gurgaon</option><option value="Rohtak">Rohtak</option><option value="Chandigarh">Chandigarh</option><option value="Ambala">Ambala</option><option value="Patiala">Patiala</option><option value="Shimla">Shimla</option><option value="Manali">Manali</option><option value="Haridwar">Haridwar</option><option value="Rishikesh">Rishikesh</option><option value="Dehradun">Dehradun</option><option value="Mussorie">Mussorie</option><option value="Nainital">Nainital</option><option value="Corbett">Corbett</option><option value="Rudrapur City">Rudrapur City</option>
-                            </select>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <div class="input-group with-icon location-select">
-                            <div class="input-group-addon">
-                                <i class="fa fa-map-marker"></i>
+                        <div class="form-group">
+                            <div class="input-group with-icon location-select">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <select class="form-control" id="toCity" required>
+                                    <option value="" disabled="disabled" selected="selected">Select Destination</option>
+                                    <option value="Delhi">Delhi</option><option value="Jaipur">Jaipur</option><option value="Noida">Noida</option><option value="Greater Noida">Greater Noida</option><option value="Ghaziabad">Ghaziabad</option><option value="Agra">Agra</option><option value="Meerut">Meerut</option><option value="Mathura">Mathura</option><option value="Aligarh">Aligarh</option><option value="Bareilly">Bareilly</option><option value="Moradabad">Moradabad</option><option value="Faridabad">Faridabad</option><option value="Gurgaon">Gurgaon</option><option value="Rohtak">Rohtak</option><option value="Chandigarh">Chandigarh</option><option value="Ambala">Ambala</option><option value="Patiala">Patiala</option><option value="Shimla">Shimla</option><option value="Manali">Manali</option><option value="Haridwar">Haridwar</option><option value="Rishikesh">Rishikesh</option><option value="Dehradun">Dehradun</option><option value="Mussorie">Mussorie</option><option value="Nainital">Nainital</option><option value="Corbett">Corbett</option><option value="Rudrapur City">Rudrapur City</option>
+                                </select>
                             </div>
-                            <select class="form-control" id="toCity" required>
-                                <option value="" disabled="disabled" selected="selected">Select Destination</option>
-                                <option value="Delhi">Delhi</option><option value="Jaipur">Jaipur</option><option value="Noida">Noida</option><option value="Greater Noida">Greater Noida</option><option value="Ghaziabad">Ghaziabad</option><option value="Agra">Agra</option><option value="Meerut">Meerut</option><option value="Mathura">Mathura</option><option value="Aligarh">Aligarh</option><option value="Bareilly">Bareilly</option><option value="Moradabad">Moradabad</option><option value="Faridabad">Faridabad</option><option value="Gurgaon">Gurgaon</option><option value="Rohtak">Rohtak</option><option value="Chandigarh">Chandigarh</option><option value="Ambala">Ambala</option><option value="Patiala">Patiala</option><option value="Shimla">Shimla</option><option value="Manali">Manali</option><option value="Haridwar">Haridwar</option><option value="Rishikesh">Rishikesh</option><option value="Dehradun">Dehradun</option><option value="Mussorie">Mussorie</option><option value="Nainital">Nainital</option><option value="Corbett">Corbett</option><option value="Rudrapur City">Rudrapur City</option>
-                            </select>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <div class="input-group with-icon time-select">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
+                        <div class="form-group">
+                            <div class="input-group with-icon time-select">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="datetime-local" id="s-time" required>
                             </div>
-                            <input type="datetime-local" id="s-time" required>
                         </div>
-                    </div>
 
-                    <div class="form-group" id="r-time-elem" style="display:none">
-                        <div class="input-group with-icon time-select">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
+                        <div class="form-group" id="r-time-elem" style="display:none">
+                            <div class="input-group with-icon time-select">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="datetime-local" id="r-time">
                             </div>
-                            <input type="datetime-local" id="r-time">
                         </div>
-                    </div>
 
-                    <button type="submit" id="btn-search" class="btn btn-primary">Find Taxis</button>
-                </form>
+                        <button type="submit" id="btn-search" class="btn btn-primary">Find Taxis</button>
+                    </form>
 
-                <form class="form round-trip-form">
-                    <div class="form-group">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" id="chkbx-r-trip"> Round Trip?
-                            </label>
+                    <form class="form round-trip-form">
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="chkbx-r-trip"> Round Trip?
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
 
-                <form class="form form-inline cab-selection-form" id="cab-selection-elem" style="display:none">
+                <form class="form form-inline cab-selection-form" id="cab-selection" style="display:none">
                     <div class="form-group subtitle">
                         <span>Select a Cab type</span>
                     </div>
@@ -107,7 +109,7 @@
                     </div>
                 </form>
 
-                <form class="form contact-details-form" id="contact-details-elem" style="display:none">
+                <form class="form contact-details-form" id="contact-info" style="display:none">
                     <div class="subtitle">
                         Please enter your contact details
                     </div>
