@@ -68,6 +68,10 @@
         scrollTop: $formContactInfo.offset().top - $wrapper.offset().top + $wrapper.scrollTop()
       }, 1210);
     });
+
+    $formContactInfo.on('submit', function () {
+      return false;
+    });
   }
 
   $(document).ready(init);
