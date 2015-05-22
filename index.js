@@ -13,7 +13,7 @@ app.set('port', 3000);
 // Any HTTP request will be satisfied using the content under './client'
 app.use(express.static('./client'));
 // use a body parse for JSON requests
-app.use(bodyParser());
+app.use(bodyParser.json());
 
 app.post('/bookings', function (req, res) {
   var booking = req.body;

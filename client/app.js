@@ -9,7 +9,7 @@
 
     var $elementReturnTime = $('#r-time-elem');
     var $elementFormContainer = $('.cab-form-container');
-    //var $elementTripPlan = $('#trip-plan-elem');
+    var $elementTripPlan = $('#trip-plan-elem');
     var $elementsCabTypeContainer = $('.cab-type-container');
 
     var $formTripPlan = $('#trip-plan');
@@ -47,6 +47,7 @@
     $elementsCabTypeContainer.on('click', function (event) {
       var $elementSelectedCabType = $(event.currentTarget);
       var formHeight = $elementFormContainer.outerHeight(false);
+      var elementTripPlanHeight = $elementTripPlan.outerHeight(false);
       var formCabSelectionHeight = $formCabSelection.outerHeight(false);
 
       $elementsCabTypeContainer.removeClass(classes.SELECTED_CAB_TYPE);
@@ -58,7 +59,7 @@
         $elementFormContainer.animate({
           height: formHeight +
             ($formContactInfo.outerHeight(false) > $body.height() ? $formContactInfo.outerHeight(false) : $body.height()) -
-            ($body.height() > formCabSelectionHeight ? formCabSelectionHeight : 0) +
+            ($body.height() > formCabSelectionHeight ? formHeight - elementTripPlanHeight - formCabSelectionHeight : 0) +
             parseInt($elementFormContainer.css('padding-bottom'), 10)
         }, 900);
         step++;
