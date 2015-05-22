@@ -80,6 +80,12 @@
 
       return false;
     });
+
+    window.onresize = function () {
+      console.log($elementFormContainer.attr('style'));
+      $elementFormContainer.attr('style', '');
+      console.log($elementFormContainer.attr('style'));
+    };
   }
 
   $(document).ready(init);
