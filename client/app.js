@@ -70,6 +70,15 @@
     });
 
     $formContactInfo.on('submit', function () {
+
+      var promise = $.post('bookings', {
+        blah: 'blah'
+      }, 'json');
+
+      promise.done(function (data) {
+        console.log(data);
+      });
+
       return false;
     });
   }

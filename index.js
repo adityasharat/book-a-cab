@@ -15,12 +15,12 @@ app.use(express.static('./client'));
 // use a body parse for JSON requests
 app.use(bodyParser());
 
-app.post('/request', function (req, res) {
+app.post('/bookings', function (req, res) {
   var booking = req.body;
   console.log(booking);
-  res.send({
+  res.status(200).send({
     success: true
-  }, 200);
+  });
 });
 
 server = http.createServer(app);
