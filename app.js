@@ -9,7 +9,7 @@
 
     var $elementReturnTime = $('#r-time-elem');
     var $elementFormContainer = $('.cab-form-container');
-    var $elementTripPlan = $('#trip-plan-elem');
+    //var $elementTripPlan = $('#trip-plan-elem');
     var $elementsCabTypeContainer = $('.cab-type-container');
 
     var $formTripPlan = $('#trip-plan');
