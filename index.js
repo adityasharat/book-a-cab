@@ -9,7 +9,7 @@ var server;
 /* Configure Express */
 
 // set port
-app.set('port', 3000);
+app.set('port', 8080);
 // Any HTTP request will be satisfied using the content under './client'
 app.use(express.static('./client'));
 // use a body parse for JSON requests
