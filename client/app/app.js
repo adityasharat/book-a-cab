@@ -72,7 +72,7 @@
 
     $formContactInfo.on('submit', function () {
 
-      var promise = $.post('bookings', {}, 'json');
+      var promise = $.post('/bookings', {}, 'json');
 
       promise.done(function (data) {
         console.log(data);
