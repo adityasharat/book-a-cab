@@ -84,25 +84,25 @@
                     <div class="form-group subtitle">
                         <span>Select a Cab type</span>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <div class="cab-type-container cab-type-mini" data-cab-type="mini">
                             <div class="cab-type-label">Mini</div>
                             <img src="images/mini.jpg" alt="Mini" class="cab-image">
                             <i class="fa fa-check"></i>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
-                        <div class="cab-type-container cab-type-sedan" data-cab-type="sedan">
-                            <div class="cab-type-label">Sedan</div>
+                        <div class="cab-type-container cab-type-sedan" data-cab-type="quad">
+                            <div class="cab-type-label">Quad</div>
                             <img src="images/sedan.png" alt="Sedan" class="cab-image">
                             <i class="fa fa-check"></i>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <div class="cab-type-container cab-type-prime" data-cab-type="prime">
-                            <div class="cab-type-label">Prime</div>
+                        <div class="cab-type-container cab-type-prime" data-cab-type="hex">
+                            <div class="cab-type-label">Hex</div>
                             <img src="images/prime.jpg" alt="Prime" class="cab-image">
                             <i class="fa fa-check"></i>
                         </div>
@@ -122,9 +122,9 @@
                     <div class="form-group">
                         <input id="input-number" type="text" placeholder="Your Mobile Number" required>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <input id="input-pickup-time" type="time" placeholder="Pickup Time" required>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <textarea id="input-address" placeholder="Pickup Address" required></textarea>
                     </div>
@@ -133,6 +133,14 @@
                     </div>
                     <div class="form-group">
                         <button id="btn-confirm" type="submit" class="btn btn-primary">Confirm</button>
+                    </div>
+
+                    <div class="form-group confirm" style="display:none">
+                        <span>Your booking has been received. </span>
+                        <br>
+                        <span>Your booking ID is</span> <span id="bid"></span>
+                        <br>
+                        <span>We will contact you soon. Cheers ;)</span>
                     </div>
                 </form>
             </div>

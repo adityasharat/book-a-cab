@@ -1,10 +1,35 @@
 var express = require('express');
 var fs = require('fs');
 var http = require('http');
-var notes = [];
 var bodyParser = require('body-parser');
+var nodemailer = require('nodemailer');
+var sha1 = require('sha1');
 var app = express();
 var server;
+
+var transporter = nodemailer.createTransport({
+  service: 'Gmail',
+  auth: {
+    user: 'mailer.service.cab@gmail.com',
+    pass: '1212qw1212'
+  }
+});
+
+function getValue(value) {
+  if (typeof value === 'boolean') {
+    return value ? 'Yes' : 'No';
+  }
+  return value;
+}
+
+function getTable(booking) {
+  var response = '<table>';
+  var keys = Object.keys(booking);
+  keys.forEach(function (key) {
+    response += '<tr><td><b>' + key + '</b></td><td>' + getValue(booking[key]) + '</td></tr>';
+  });
+  return response + '</table>';
+}
 
 /* Configure Express */
 
@@ -17,9 +42,30 @@ app.use(bodyParser.json());
 
 app.post('/bookings', function (req, res) {
   var booking = req.body;
-  console.log(booking);
+  var bookingString = JSON.stringify(booking);
+
+  booking.id = 'booking-' + sha1(bookingString);
+  booking.created = new Date().toString();
+
+  var mailOptions = {
+    from: 'Cab Mailer Service <mailer.service.cab@gmail.com>', // sender address
+    to: 'pranavparthtyagi@gmail.com, pratapraghvendra1916@gmail.com, harshsharma3391@gmail.com', // list of receivers
+    subject: 'Hello', // Subject line
+    text: bookingString, // plaintext body
+    html: getTable(booking) // html body
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Message sent: ' + info.response);
+    }
+  });
+
   res.status(200).send({
-    success: true
+    success: true,
+    id: booking.id
   });
 });
 

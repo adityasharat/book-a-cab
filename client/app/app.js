@@ -1,3 +1,4 @@
+/*global window, alert*/
 (function ($) {
 
   function init() {
@@ -21,8 +22,38 @@
 
     var step = 0;
 
+    var booking = {
+      name: undefined,
+      email: undefined,
+      number: undefined,
+      pickupTime: undefined,
+      returnTime: undefined,
+      fromCity: undefined,
+      toCity: undefined,
+      isReturn: false,
+      cabType: undefined,
+      pickupAddress: undefined,
+      comments: undefined,
+    };
+
+    function createBooking() {
+      booking.fromCity = $('#fromCity').val();
+      booking.toCity = $('#toCity').val();
+      booking.pickupTime = $('#s-time').val().toString();
+      booking.returnTime = $('#r-time').val().toString();
+      booking.cabType = $('[data-cab-type].selected').data('cab-type');
+      booking.name = $('#input-name').val();
+      booking.email = $('#input-email').val();
+      booking.pickupAddress = $('#input-address').val();
+      booking.comments = $('#input-comments').val();
+      booking.isReturn = $checkboxReturnTrip[0].checked;
+      booking.number = $('#input-number').val();
+      return booking;
+    }
+
     $checkboxReturnTrip.on('click', function () {
       $elementReturnTime.toggle(this.checked);
+      /*booking.isReturn = this.checked;*/
     });
 
     $formTripPlan.on('submit', function () {
@@ -71,11 +102,20 @@
     });
 
     $formContactInfo.on('submit', function () {
+      // get form values and return booking
+      var finalBooking = createBooking();
 
-      var promise = $.post('/bookings', {}, 'json');
+      var promise = $.ajax('/bookings', {
+        'data': JSON.stringify(finalBooking),
+        'type': 'POST',
+        'processData': false,
+        'contentType': 'application/json'
+      });
 
       promise.done(function (data) {
-        console.log(data);
+        $('#bid').html(data.id);
+        $('.confirm').show();
+        alert('Your booking has been received ' + data.id + '. We will contact you soon.');
       });
 
       return false;
