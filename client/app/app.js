@@ -105,7 +105,7 @@
       // get form values and return booking
       var finalBooking = createBooking();
 
-      var promise = $.ajax('/bookings', {
+      var promise = $.ajax('bookings', {
         'data': JSON.stringify(finalBooking),
         'type': 'POST',
         'processData': false,

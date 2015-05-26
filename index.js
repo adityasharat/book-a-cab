@@ -50,7 +50,8 @@ app.post('/bookings', function (req, res) {
   var mailOptions = {
     from: 'Cab Mailer Service <mailer.service.cab@gmail.com>', // sender address
     to: 'pranavparthtyagi@gmail.com, pratapraghvendra1916@gmail.com, harshsharma3391@gmail.com', // list of receivers
-    subject: 'Hello', // Subject line
+    //to: 'adityasharat@gmail.com',
+    subject: 'Alert: Cab Booking: ' + booking.id, // Subject line
     text: bookingString, // plaintext body
     html: getTable(booking) // html body
   };
