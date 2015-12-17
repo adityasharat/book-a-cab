@@ -10,8 +10,8 @@ var server;
 var transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
-    user: 'mailer.service.cab@gmail.com',
-    pass: '1212qw1212'
+    user: '',
+    pass: ''
   }
 });
 
@@ -48,8 +48,8 @@ app.post('/bookings', function (req, res) {
   booking.created = new Date().toString();
 
   var mailOptions = {
-    from: 'Cab Mailer Service <mailer.service.cab@gmail.com>', // sender address
-    to: 'pranavparthtyagi@gmail.com, pratapraghvendra1916@gmail.com, harshsharma3391@gmail.com', // list of receivers
+    from: 'Cab Mailer Service <>', // sender address
+    to: '<>,<>,<>', // list of receivers
     //to: 'adityasharat@gmail.com',
     subject: 'Alert: Cab Booking: ' + booking.id, // Subject line
     text: bookingString, // plaintext body
